@@ -5,7 +5,7 @@ import java.io.File;
 public class ReadDataStudent{
     //I hard-coded the number of rows and columns so 
     //I could use a 2D array
-    private double[][] data = new double[...][...];
+    private double[][] data = new double[21908][14];
 
     //This should read in the csv file and store the data in a 2D array,
     //data -- don't forget to skip the header line and parse everything
@@ -18,7 +18,23 @@ public class ReadDataStudent{
             while(scanner.hasNextLine()){
                 String line = scanner.nextLine();
                 String[] lineArr = line.split(",");
-                ...
+                int state = Integer.parseInt(lineArr[0]);
+                int age = Integer.parseInt(lineArr[1]);
+                int wagesal = Integer.parseInt(lineArr[2]);
+                int imm = Integer.parseInt(lineArr[3]);
+                int hispanic = Integer.parseInt(lineArr[4]);
+                int black = Integer.parseInt(lineArr[5]);
+                int asian = Integer.parseInt(lineArr[6]);
+                int edu = Integer.parseInt(lineArr[7]);
+                long wage2 = Long.parseLong(lineArr[8]);
+                long logwage = Long.parseLong(lineArr[9]);
+                int female = Integer.parseInt(lineArr[10]);
+                int fedwrkr = Integer.parseInt(lineArr[11]);
+                int statewrkr = Integer.parseInt(lineArr[12]);
+                int localwkr = Integer.parseInt(lineArr[13]);
+                for(int i = 0; i < 13; i ++){
+                    
+                }
                 row++;
             }
             scanner.close();
