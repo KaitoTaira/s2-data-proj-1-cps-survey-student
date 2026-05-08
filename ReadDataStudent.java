@@ -12,13 +12,21 @@ public class ReadDataStudent{
     //as doubles  
     public void read(){
         try{
-            Scanner scanner = new Scanner(new File("cps.csv"));
+            // Scanner scanner = new Scanner(new File("cps.csv"));
+            // int cols = scanner.nextLine().split(",").length; // Skip the header line
+            // int row = 0;
+            // while(scanner.hasNextLine()){
+            //     row++;
+            // }
+            // data = new double[row][cols];
+            // scanner.close();
             int row = 0;
-            scanner.nextLine(); // Skip the header line
+            Scanner scanner = new Scanner(new File("cps.csv"));
+            scanner.nextLine();
             while(scanner.hasNextLine()){
                 String line = scanner.nextLine();
                 String[] lineArr = line.split(",");
-                for(int i = 0; i < 14; i++){
+                for(int i = 0; i < lineArr.length; i++){
                     data[row][i] = Double.parseDouble(lineArr[i]);
                 }
                 row++;
